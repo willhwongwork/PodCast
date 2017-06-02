@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bbr.podcast">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".SearchResultsActivity" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SearchResultsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".PodcastEpsActivity"
+            android:theme="@style/TranslucentStatusTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bbr.podcast.SearchResultsActivity" />
+        </activity>
+        <activity
+            android:name=".MediaPlayerActivity"
+            android:theme="@style/TranslucentStatusTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bbr.podcast.PodcastEpsActivity" />
+        </activity>
+        <activity
+            android:name=".PlaylistEpsActivity"
+            android:theme="@style/TranslucentStatusTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bbr.podcast.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:theme="@style/SettingsTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bbr.podcast.MainActivity" />
+        </activity>
+
+        <service android:name=".MediaPlaybackService">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".RefreshEpisodesService"
+            android:exported="false" />
+
+        <receiver android:name="android.support.v4.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".utils.DownloadCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".data.PodcastProvider"
+            android:authorities="bbr.podcast" />
+    </application>
+
+</manifest>

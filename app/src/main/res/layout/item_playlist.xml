@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGrey"
+    android:elevation="4dp">
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/playlist_thumb"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/playlist_thumb1"
+        android:layout_toEndOf="@+id/playlist_thumb" />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/playlist_thumb2"
+        android:layout_below="@+id/playlist_thumb"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/playlist_thumb3"
+        android:layout_below="@+id/playlist_thumb"
+        android:layout_toEndOf="@+id/playlist_thumb" />
+
+    <TextView
+        android:id="@+id/playlist"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/playlist_thumb3"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="playlist name"/>
+
+    <ImageButton
+        android:id="@+id/more_playlist_actions"
+        android:src="@drawable/ic_more_vert"
+        android:layout_width="20dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/playlist_thumb3"
+        android:layout_toEndOf="@+id/playlist"
+        android:layout_gravity="center_vertical"
+        android:gravity="center" />
+
+
+</RelativeLayout>

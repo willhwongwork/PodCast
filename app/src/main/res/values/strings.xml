@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">PodCast</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="search_title">Search</string>
+    <string name="search_hint">search podcast</string>
+    <string name="connection_error">connection error</string>
+    <string name="xml_error">xml error</string>
+
+    <string name="menu_refresh">Refresh Episodes</string>
+    <string name="menu_delete">delete</string>
+
+    <string name="intent_pass_episode">bbr.podcast.episode</string>
+    <string name="intent_pass_thumbnail">bbr.podcast.itunespodcast.thumbnail</string>
+    <string name="intent_pass_feedUrl">bbr.podcast.itunespodcast.feedUrl</string>
+    <string name="intent_pass_itunesimage">bbr.podcast.channel_itunesimage</string>
+    <string name="intent_pass_playlistname">bbr.podcast.playlistname</string>
+    <string name="intent_pass_playlistnumber">bbr.podcast.playlistnumber</string>
+    <string name="intent_pass_playlist_eps_count">bbr.podcast.episodes_count</string>
+    <string name="intent_pass_thumbs_list">bbr.podcast.thumbs_list</string>
+    <string name="intent_pass_episodes_list">bbr.podcast.episodes_list</string>
+    <string name="intent_pass_episodes_position">bbr.podcast.episodes_position</string>
+    <string name="intent_pass_subscription">bbr.podcast.subscription</string>
+    <string name="intent_pass_channel_title">bbr.podcast.channel_title</string>
+    <string name="intent_pass_channel_description">bbr.podcast.channel_description</string>
+
+    <string name="button_share">share</string>
+    <string name="button_subscribe">subscribe</string>
+
+    <string name="read_more_text">READ MORE</string>
+
+    <string name="currently_playing_podcast">Podcast currently playing</string>
+    <string name="currently_playing_author">Author of currently playing podcast</string>
+    <string name="currently_playing_extra_info">Extra info for currently playing podcast</string>
+    <string name="play_pause">play or pause</string>
+
+    <string name="add_playlist">add playlist</string>
+    <string name="add_eps_to_playlist">add episode to playlist</string>
+    <string name="add_button">add</string>
+    <string name="cancel_button">cancel</string>
+    <string name="subscribe">subscribe</string>
+    <string name="unsubscribe">unsubscribe</string>
+    
+    <string name="pref_download">download over wifi only</string>
+    <string name="pref_download_key">pref_download</string>
+
+
+</resources>
