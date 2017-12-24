@@ -32,7 +32,8 @@ public class MainActivity extends BaseActivity implements AddPlaylistDialogFragm
         setContentView(R.layout.activity_main);
 
         // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
-        MobileAds.initialize(this, "ca-app-pub-6750951445110951~7154115628");
+        
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
 
         Toolbar mainToolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(mainToolbar);
