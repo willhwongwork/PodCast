@@ -12,5 +12,15 @@ public final class Constants {
     public static final String EXTENDED_DATA_STATUS =
             "bbr.podcast.STATUS";
 
-    //inform
+    public static final String DISCOVER_BROADCAST_ACTION =
+            "bbr.podcast.DISCOVER_BROADCAST";
+
+    public static final String DISCOVER_EXTENDED_DATA_STATUS =
+            "bbr.podcast.DISCOVER_STATUS";
+
+    public static final String GENRE_BROADCAST_ACTION =
+            "bbr.podcast.GENRE_BROADCAST";
+
+    public static final String GENRE_EXTENDED_DATA_STATUS =
+            "bbr.podcast.GENRE_STATUS";
 }

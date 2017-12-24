@@ -51,6 +51,7 @@
                 <ImageView
                     app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
                     android:id="@+id/podcast_image"
+                    android:contentDescription="@string/image_of_the_podcast_channel"
                     app:layout_widthPercent="100%"
                     app:layout_aspectRatio="100%"
                     android:adjustViewBounds="true"
@@ -70,7 +71,7 @@
         android:elevation="8dp"
         android:layout_gravity="bottom">
 
-        <fragment android:name="bbr.podcast.PlaybackControlsFragment"
+        <fragment android:name="bbr.podcast.fragment.PlaybackControlsFragment"
             android:id="@+id/fragment_playback_controls"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

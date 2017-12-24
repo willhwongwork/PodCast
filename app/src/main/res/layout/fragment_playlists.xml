@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:id="@+id/playlist_recycler_view"
     android:paddingBottom="80dp"
+    android:elevation="4dp"
     android:clipToPadding="false"/>
 
 

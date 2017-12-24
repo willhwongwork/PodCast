@@ -17,9 +17,6 @@ public class Episode implements Parcelable{
     public final String explicit;
     public final String episodeImage;
 
-
-    private static final String ns = null;
-
     public Episode(String title, String link, String pubDate, String description, String enclosure, String duration, String explicit, String episodeImage) {
         this.title = title;
         this.link = link;

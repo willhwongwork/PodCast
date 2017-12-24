@@ -4,31 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/colorGrey"
+    android:background="@color/cardview_light_background"
     android:elevation="4dp">
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/playlist_thumb"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/image_of_a_episode_in_this_playlist"/>
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/playlist_thumb1"
-        android:layout_toEndOf="@+id/playlist_thumb" />
+        android:layout_toEndOf="@+id/playlist_thumb"
+        android:contentDescription="@string/image_of_a_episode_in_this_playlist"/>
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/playlist_thumb2"
         android:layout_below="@+id/playlist_thumb"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/image_of_a_episode_in_this_playlist"/>
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/playlist_thumb3"
         android:layout_below="@+id/playlist_thumb"
-        android:layout_toEndOf="@+id/playlist_thumb" />
+        android:layout_toEndOf="@+id/playlist_thumb"
+        android:contentDescription="@string/image_of_a_episode_in_this_playlist"/>
 
     <TextView
         android:id="@+id/playlist"
@@ -43,7 +47,7 @@
         android:gravity="center_vertical"
         android:textColor="?android:attr/textColorPrimary"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="playlist name"/>
+        android:text="@string/playlist_name"/>
 
     <ImageButton
         android:id="@+id/more_playlist_actions"
@@ -55,7 +59,9 @@
         android:layout_below="@+id/playlist_thumb3"
         android:layout_toEndOf="@+id/playlist"
         android:layout_gravity="center_vertical"
-        android:gravity="center" />
+        android:gravity="center"
+        android:background="@color/cardview_light_background"
+        android:contentDescription="@string/button_for_more_actions"/>
 
 
 </RelativeLayout>

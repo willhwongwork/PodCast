@@ -583,10 +583,14 @@ public class PodcastProvider extends ContentProvider {
 
         if(retCursor.moveToFirst()) {
             Log.d(LOG_TAG, "Episode" + title + " exist");
+            retCursor.close();
             return true;
         } else {
             Log.d(LOG_TAG, "Episode" + title + " not exist");
+            retCursor.close();
             return false;
         }
+
+
     }
 }

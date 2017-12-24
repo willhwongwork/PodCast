@@ -12,7 +12,8 @@
         android:layout_weight="1"
         android:src="@drawable/ic_library_add_black_24dp"
         android:background="?selectableItemBackgroundBorderless"
-        android:text="@string/button_subscribe" />
+        android:text="@string/button_subscribe"
+        android:contentDescription="@string/button_for_subscription"/>
 
     <ImageButton
         android:id="@+id/share"
@@ -21,5 +22,6 @@
         android:layout_weight="1"
         android:src="@drawable/ic_share_black_24dp"
         android:background="?selectableItemBackgroundBorderless"
-        android:text="@string/button_share" />
+        android:text="@string/button_share"
+        android:contentDescription="@string/button_for_sharing"/>
 </LinearLayout>

@@ -16,54 +16,63 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="android.app.default_searchable"
-            android:value=".SearchResultsActivity" />
+            android:value=".activity.SearchResultsActivity" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchResultsActivity">
+        <activity android:name=".activity.SearchResultsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name=".PodcastEpsActivity"
+            android:name=".activity.PodcastEpsActivity"
             android:theme="@style/TranslucentStatusTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="bbr.podcast.SearchResultsActivity" />
+                android:value="bbr.podcast.activity.SearchResultsActivity" />
         </activity>
         <activity
-            android:name=".MediaPlayerActivity"
+            android:name=".activity.MediaPlayerActivity"
             android:theme="@style/TranslucentStatusTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="bbr.podcast.PodcastEpsActivity" />
+                android:value="bbr.podcast.activity.PodcastEpsActivity" />
         </activity>
         <activity
-            android:name=".PlaylistEpsActivity"
-            android:theme="@style/TranslucentStatusTheme">
+            android:name=".activity.PlaylistEpsActivity"
+            android:theme="@style/TranslucentStatusTheme"
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="bbr.podcast.MainActivity" />
+                android:value="bbr.podcast.activity.MainActivity" />
+        </activity>
+        <activity android:name=".activity.GenreDetailActivity"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bbr.podcast.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".SettingsActivity"
-            android:theme="@style/SettingsTheme">
+            android:name=".activity.SettingsActivity"
+            android:theme="@style/SettingsTheme"
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="bbr.podcast.MainActivity" />
+                android:value="bbr.podcast.activity.MainActivity" />
         </activity>
 
-        <service android:name=".MediaPlaybackService">
+        <service android:name=".service.MediaPlaybackService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":player">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
                 <action android:name="android.media.AUDIO_BECOMING_NOISY" />
@@ -71,7 +80,11 @@
             </intent-filter>
         </service>
         <service
-            android:name=".RefreshEpisodesService"
+            android:name=".service.RefreshEpisodesService"
+            android:exported="false" />
+        <service android:name=".service.DownloadDiscoverThumbnailsService"
+            android:exported="false" />
+        <service android:name=".service.GenreDownloadChannelsService"
             android:exported="false" />
 
         <receiver android:name="android.support.v4.media.session.MediaButtonReceiver">
@@ -84,6 +97,15 @@
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
             </intent-filter>
+        </receiver>
+
+        <receiver android:name=".widget.PodcastWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="bbr.podcast.ACTION_METADATA_UPDATED" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_info" />
         </receiver>
 
         <provider

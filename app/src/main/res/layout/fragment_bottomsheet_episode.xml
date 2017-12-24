@@ -14,21 +14,24 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/ic_file_download_black_24dp"
-            android:background="?selectableItemBackgroundBorderless" />
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/download_button_for_this_episode"/>
         <ImageButton
             android:id="@+id/add_favorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/ic_favorite_black_24dp"
-            android:background="?selectableItemBackgroundBorderless" />
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/favorite_button_for_this_episode"/>
         <ImageButton
             android:id="@+id/add_to_playlist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/ic_playlist_add_black_24dp"
-            android:background="?selectableItemBackgroundBorderless"/>
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@string/button_for_adding_this_episode_to_a_playlist"/>
 
     </LinearLayout>
 
@@ -37,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="episode title"
+        android:text="@string/episode_title"
         android:textColor="@color/colorBlack"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
@@ -49,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="episode description"
+        android:text="@string/episode_description"
         android:layout_below="@+id/episode_bottom_title"
         android:layout_alignParentStart="true"
         android:padding="16dp"/>

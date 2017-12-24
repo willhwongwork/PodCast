@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import bbr.podcast.PodcastEpsActivity;
+import bbr.podcast.activity.PodcastEpsActivity;
 
 /**
  * Created by Me on 4/19/2017.
@@ -31,7 +31,7 @@ public class RSSChannelParser {
         String managingEditor = null;
         String itunesImage = null;
         String imageUrl = null;
-        List<Episode> episodes = new ArrayList<>();;
+        List<Episode> episodes = new ArrayList<>();
 
         while (parser.next() != XmlPullParser.END_TAG) {
             if(task != null && task.isCancelled() == true) {

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tab_title">
+        <item>Subscriptions</item>
+        <item>Playlists</item>
+        <item>Discover</item>
+    </string-array>
+
+    <string-array name="genre_name">
+        <item>Arts</item>
+        <item>Comedy</item>
+        <item>Education</item>
+        <item>Kids&amp;Family</item>
+        <item>Health</item>
+        <item>TV&amp;Film</item>
+        <item>Music</item>
+        <item>News&amp;Politics</item>
+        <item>Religion&amp;Spirituality</item>
+        <item>Science&amp;Medicine</item>
+        <item>Sports&amp;Recreation</item>
+        <item>Technology</item>
+        <item>Business</item>
+        <item>Games&amp;Hobbies</item>
+        <item>Society&amp;Culture</item>
+        <item>Government&amp;Organizations</item>
+    </string-array>
+
+    <integer-array name="genre_id">
+        <item>1301</item>
+        <item>1303</item>
+        <item>1304</item>
+        <item>1305</item>
+        <item>1307</item>
+        <item>1309</item>
+        <item>1310</item>
+        <item>1311</item>
+        <item>1314</item>
+        <item>1315</item>
+        <item>1316</item>
+        <item>1318</item>
+        <item>1321</item>
+        <item>1323</item>
+        <item>1324</item>
+        <item>1325</item>
+    </integer-array>
+</resources>

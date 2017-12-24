@@ -7,7 +7,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.IOException;
 import java.io.InputStream;
 
-import bbr.podcast.PodcastEpsActivity;
+import bbr.podcast.activity.PodcastEpsActivity;
 
 /**
  * Created by Me on 4/18/2017.

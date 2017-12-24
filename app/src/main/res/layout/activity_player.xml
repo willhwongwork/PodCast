@@ -9,6 +9,7 @@
         android:id="@+id/background_image"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:contentDescription="@string/background_image_for_the_player"
         android:scaleType="centerCrop" />
 
     <RelativeLayout
@@ -115,6 +116,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/button_for_previous_episode"
                     android:src="@drawable/ic_skip_previous_white_48dp" />
 
                 <ImageView
@@ -132,6 +134,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/button_for_next_episode"
                     android:src="@drawable/ic_skip_next_white_48dp" />
 
             </LinearLayout>

@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import bbr.podcast.PodcastEpsActivity;
+import bbr.podcast.activity.PodcastEpsActivity;
 
 /**
  * Created by Me on 4/19/2017.
@@ -121,7 +121,9 @@ public class RSSParser {
         parser.require(XmlPullParser.START_TAG, ns, "pubDate");
         String pubDate = readText(parser);
         parser.require(XmlPullParser.END_TAG, ns, "pubDate");
-        pubDate = pubDate.substring(0, 17);
+        if(pubDate.length() >= 18) {
+            pubDate = pubDate.substring(0, 17);
+        }
         return pubDate;
     }
 

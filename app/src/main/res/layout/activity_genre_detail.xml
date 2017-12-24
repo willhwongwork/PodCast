@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/genre_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:numColumns="auto_fit" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/controls_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <fragment android:name="bbr.podcast.fragment.PlaybackControlsFragment"
+            android:id="@+id/fragment_playback_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_playback_controls" />
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

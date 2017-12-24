@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:padding="4dp"
         android:id="@+id/podcast_title"
-        android:text="Podcast Title"
+        android:text="@string/podcast_title"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="?android:attr/textColorPrimary"/>
     <TextView

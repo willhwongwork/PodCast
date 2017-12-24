@@ -61,6 +61,8 @@ public class PlaylistHelper {
                 PodcastContract.PlaylistEpisodeEntry.COLUMN_EPISODE_NAME + "=? " + " AND " +
                         PodcastContract.PlaylistEpisodeEntry.COLUMN_PLAYLIST_NAME + " =?",
                 new String[]{title, "downloaded"});
+
+        cursor.close();
     }
 
     public static Cursor getEpisodeIdCursor(String title, Context context) {

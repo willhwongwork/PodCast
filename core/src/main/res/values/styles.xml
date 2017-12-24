@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Podcast.Dark" parent="Theme.AppCompat">
+
+    </style>
+
+    <style name="Theme.Podcast.Light" parent="Theme.AppCompat.Light">
+
+    </style>
+
+    <style name="Theme.Podcast.Dark.NoTitle" parent="Theme.AppCompat.NoActionBar">
+
+    </style>
+
+    <style name="Theme.Podcast.Light.NoTitle" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+</resources>
