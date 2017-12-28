@@ -3,10 +3,6 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         config {
-            keyAlias 'podcast'
-            keyPassword 'ia89mn04ot'
-            storeFile file("$rootDir/podcast.jks")
-            storePassword 'ia89mn04ot'
         }
     }
     compileSdkVersion 25
