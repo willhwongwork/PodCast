@@ -3,6 +3,8 @@
 [image2]: device-2017-06-02-001134.png
 [image3]: device-2017-06-02-001347.png
 A podcast app.
-             |
-:-------------------------:|:-------------------------:
-![][image1]  |  ![][image2]
+<p float="left">
+  <img src="[image1]" width="100" />
+  <img src="[image2]" width="100" /> 
+  <img src="[image3]" width="100" />
+</p>
